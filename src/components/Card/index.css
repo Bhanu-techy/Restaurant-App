@@ -1,0 +1,81 @@
+.card {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+  font-family: roboto;
+  border: 1px solid #bfbfbf;
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+.button-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: green;
+  color: #ffffff;
+  width: 80px;
+  height: 27px;
+  border-radius: 25px;
+}
+.buttonsign {
+  background-color: transparent;
+  border: 0px;
+  color: #ffffff;
+}
+.dishimg {
+  width: 140px;
+  height: 150px;
+  border-radius: 5px;
+}
+.dish-name {
+  font-size: 22px;
+}
+.card-1 {
+  width: 500px;
+}
+.card-2 {
+  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.calories {
+  color: orange;
+  font-weight: 500;
+  font-size: 18px;
+}
+.description {
+  color: #bfbfbf;
+}
+.price {
+  font-weight: bold;
+}
+.addonCat {
+  color: blue;
+}
+.not-available {
+  color: red;
+}
+.cart-button {
+  display: flex;
+  height: 80px;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px;
+  width: 50px;
+  background-color: transparent;
+  padding-top: 20px;
+  border: none;
+}
+.cart-num {
+  align-self: flex-end;
+  color: #ffffff;
+  background-color: red;
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+}
+.addoncss {
+  display: none;
+}

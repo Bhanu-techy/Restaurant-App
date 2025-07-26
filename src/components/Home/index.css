@@ -1,0 +1,43 @@
+.heading {
+  font-family: roboto;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #bfbfbf;
+}
+.cart-div {
+  display: flex;
+  align-items: center;
+}
+ul {
+  list-style: none;
+}
+.header-list {
+  display: flex;
+  width: 100vw;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.icon {
+  margin-bottom: 10px;
+}
+.activeCss {
+  color: red;
+}
+.categorybtn {
+  border: none;
+  background-color: transparent;
+}
+.activeCssLine {
+  color: red;
+}
+.line {
+  color: #ffffff;
+}
