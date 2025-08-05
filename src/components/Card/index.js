@@ -71,13 +71,15 @@ class Card extends Component {
                         +
                       </button>
                     </div>
-                    <button
-                      type="button"
-                      onClick={onClickAddToCart}
-                      className="add-cart-btn"
-                    >
-                      ADD TO CART
-                    </button>
+                    {count > 0 && (
+                      <button
+                        type="button"
+                        onClick={onClickAddToCart}
+                        className="add-cart-btn"
+                      >
+                        ADD TO CART
+                      </button>
+                    )}
                     <p className={`addonCat ${addonview}`}>
                       Customizations availabile
                     </p>

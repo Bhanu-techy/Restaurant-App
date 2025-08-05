@@ -18,7 +18,7 @@ const Cart = () => (
             {cartList.length === 0 ? (
               <div className="cart-empty-view">
                 <img
-                  src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-empty-cart-img.png"
+                  src="https://i.imgur.com/PoJfqsD.jpg"
                   alt="cart empty"
                   className="empty-cart-img"
                 />

@@ -44,12 +44,12 @@ class Home extends Component {
             <>
               <Header />
               <div>
-                <div className="header">
-                  <ul className="header-list">
+                <div className='header'>
+                  <ul className='header-list'>
                     {table_menu_list.map(each => (
                       <li key={each.menu_category_id}>
                         <button
-                          type="button"
+                          type='button'
                           onClick={() => this.onClickCategory(each)}
                           className={`categorybtn ${
                             menu_category_id === each.menu_category_id
@@ -70,7 +70,7 @@ class Home extends Component {
                     ))}
                   </ul>
                 </div>
-                <ul className="dish-list">
+                <ul className='dish-list'>
                   {category_dishes.map(each => (
                     <Card data={each} key={each.dish_id} />
                   ))}
