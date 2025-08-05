@@ -1,0 +1,26 @@
+.logout-btn {
+  margin: 10px;
+  background-color: rgb(48, 48, 240);
+  border: 0px;
+  color: #ffffff;
+  height: 27px;
+  width: 80px;
+  border-radius: 7px;
+}
+.heading {
+  font-family: roboto;
+}
+.cart-div {
+  display: flex;
+  align-items: center;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12vh;
+  padding: 20px;
+  padding-left: 30px;
+  padding-right: 30px;
+  border: 1px solid #bfbfbf;
+}

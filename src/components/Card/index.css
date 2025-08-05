@@ -6,6 +6,16 @@
   border: 1px solid #bfbfbf;
   border-radius: 5px;
   margin-bottom: 5px;
+  height: 280px;
+  flex-shrink: 1;
+}
+.add-cart-btn {
+  margin-top: 10px;
+  border: none;
+  background-color: rgb(79, 79, 248);
+  border-radius: 5px;
+  height: 30px;
+  color: #ffffff;
 }
 .button-div {
   display: flex;
@@ -78,4 +88,7 @@
 }
 .addoncss {
   display: none;
+}
+.count {
+  color: #ffffff;
 }

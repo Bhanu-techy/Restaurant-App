@@ -1,28 +1,14 @@
-.heading {
-  font-family: roboto;
-}
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 12vh;
-  padding: 20px;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px solid #bfbfbf;
-}
-.cart-div {
-  display: flex;
-  align-items: center;
-}
 ul {
   list-style: none;
+  gap: 0px;
+  padding: 0px;
 }
 .header-list {
   display: flex;
   width: 100vw;
   justify-content: space-around;
   align-items: center;
+  padding: 0px;
 }
 
 .icon {
@@ -37,7 +23,15 @@ ul {
 }
 .activeCssLine {
   color: red;
+  background-color: red;
 }
 .line {
   color: #ffffff;
+}
+.dish-list {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.link {
+  text-decoration: none;
 }

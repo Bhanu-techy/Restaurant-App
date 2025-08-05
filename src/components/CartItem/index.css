@@ -1,0 +1,25 @@
+.dish-cart-img {
+  width: 120px;
+  height: 100px;
+  text-align: center;
+  margin-bottom: 5px;
+}
+.cart-img-div {
+  text-align: center;
+  width: 150px;
+}
+.cart-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 90vw;
+}
+.cart-btn-div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 120px;
+}
+.cart-dish-name{
+  width: 200px;
+}

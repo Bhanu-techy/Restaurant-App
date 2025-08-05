@@ -4,44 +4,27 @@ import CartContext from '../../context/CartContext'
 import './index.css'
 
 class Card extends Component {
-  static contextType = CartContext
+  state = {count: 0}
 
-  state = {data: this.props.data, count: 0}
-
-  onClickPlus = () => {
-    const {data, count} = this.state
-    console.log(data)
-    const {addCartItem} = this.context
-    addCartItem({...data, count})
+  onClickPlusBtn = () => {
+    const {count} = this.state
+    console.log(count)
+    this.setState(prevState => ({count: prevState.count + 1}))
   }
 
-  onClickPlusbtn = () => {
-    this.onClickPlus()
-
-    this.setState(prevState => ({
-      count: prevState.count + 1,
-    }))
-  }
-
-  onClickMinusbtn = () => {
-    const {data, count} = this.state
-
-    const {removeCartItem} = this.context
-
-    removeCartItem(data)
-
+  onClickMinusBtn = () => {
+    const {count} = this.state
     if (count > 0) {
-      this.setState(prevState => ({
-        count: prevState.count - 1,
-      }))
+      this.setState(prevState => ({count: prevState.count - 1}))
     }
   }
 
   render() {
-    const {data, count} = this.state
-
+    const {count} = this.state
+    const {data} = this.props
     const {
       dish_name,
+      dish_id,
       dish_calories,
       dish_description,
       dish_currency,
@@ -49,19 +32,21 @@ class Card extends Component {
       dish_image,
       dish_Availability,
       addonCat = [],
-      nexturl,
     } = data
 
-    const addonview = addonCat.length === 0 && 'addoncss'
+    const addonview = addonCat.length === 0 ? 'addoncss' : ''
 
     return (
       <CartContext.Consumer>
         {value => {
-          const {} = value
+          const {addCartItem} = value
+
+          const onClickAddToCart = () => {
+            addCartItem({...data, count})
+          }
           return (
             <li className="card list-container">
               <div className="card-1">
-                <img src={nexturl} alt="logo" />
                 <h1 className="dish-name">{dish_name}</h1>
                 <p className="currency">
                   {dish_currency} {dish_price}
@@ -73,20 +58,26 @@ class Card extends Component {
                       <button
                         type="button"
                         className="buttonsign"
-                        onClick={this.onClickMinusbtn}
+                        onClick={this.onClickMinusBtn}
                       >
                         -
                       </button>
-                      <p>{count}</p>
+                      <p className="count">{count}</p>
                       <button
                         type="button"
                         className="buttonsign"
-                        onClick={this.onClickPlusbtn}
+                        onClick={this.onClickPlusBtn}
                       >
                         +
                       </button>
                     </div>
-
+                    <button
+                      type="button"
+                      onClick={onClickAddToCart}
+                      className="add-cart-btn"
+                    >
+                      ADD TO CART
+                    </button>
                     <p className={`addonCat ${addonview}`}>
                       Customizations availabile
                     </p>
