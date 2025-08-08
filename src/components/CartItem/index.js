@@ -3,8 +3,14 @@ import './index.css'
 
 const CartItem = props => {
   const {details} = props
-  const {dish_name, dish_currency, dish_price, dish_image, dish_id, count} =
-    details
+  const {
+    dish_name,
+    dish_currency,
+    dish_price,
+    dish_image,
+    dish_id,
+    count,
+  } = details
 
   const price = dish_price * count
 
