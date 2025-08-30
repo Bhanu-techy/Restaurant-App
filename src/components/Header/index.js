@@ -5,9 +5,9 @@ import CartContext from '../../context/CartContext'
 
 import './index.css'
 
-const Header = () => {
+const Header = props => {
   const onClickLogout = () => {
-    const {history} = this.props
+    const {history} = props
     Cookies.remove('jwt_token')
     history.replace('/login')
   }

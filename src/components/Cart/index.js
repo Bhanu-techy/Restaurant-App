@@ -18,7 +18,7 @@ const Cart = () => (
             {cartList.length === 0 ? (
               <div className="cart-empty-view">
                 <img
-                  src="https://i.imgur.com/PoJfqsD.jpg"
+                  src="https://assets.ccbp.in/frontend/react-js/nxt-trendz-empty-cart-img.png"
                   alt="cart empty"
                   className="empty-cart-img"
                 />
@@ -39,7 +39,7 @@ const Cart = () => (
                 </div>
                 <ul>
                   {cartList.map(item => (
-                    <CartItem details={item} key={item.dish_id} />
+                    <CartItem details={item} key={item.dishId} />
                   ))}
                 </ul>
               </div>

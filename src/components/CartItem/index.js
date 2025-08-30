@@ -3,16 +3,9 @@ import './index.css'
 
 const CartItem = props => {
   const {details} = props
-  const {
-    dish_name,
-    dish_currency,
-    dish_price,
-    dish_image,
-    dish_id,
-    count,
-  } = details
+  const {dishName, dishCurrency, dishPrice, dishImage, dishId, count} = details
 
-  const price = dish_price * count
+  const price = dishPrice * count
 
   return (
     <CartContext.Consumer>
@@ -26,29 +19,31 @@ const CartItem = props => {
         return (
           <li className="cart-list">
             <div className="cart-img-div">
-              <img src={dish_image} alt={dish_name} className="dish-cart-img" />
+              <img src={dishImage} alt={dishName} className="dish-cart-img" />
             </div>
-            <p className="cart-dish-name">{dish_name}</p>
+            <p className="cart-dish-name">{dishName}</p>
             <div className="cart-btn-div">
               <button
                 type="button"
-                onClick={() => decrementCartItemQuantity(dish_id)}
+                onClick={() => decrementCartItemQuantity(dishId)}
               >
                 -
               </button>
               <p>{count}</p>
               <button
                 type="button"
-                onClick={() => incrementCartItemQuantity(dish_id)}
+                onClick={() => incrementCartItemQuantity(dishId)}
               >
                 +
               </button>
             </div>
 
             <p>
-              Price : {price} {dish_currency}
+              Price : {price} {dishCurrency}
             </p>
-            <button onClick={() => removeCartItem(dish_id)}>Remove</button>
+            <button type="button" onClick={() => removeCartItem(dishId)}>
+              Remove
+            </button>
           </li>
         )
       }}

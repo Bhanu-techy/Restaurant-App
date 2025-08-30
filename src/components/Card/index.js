@@ -23,14 +23,14 @@ class Card extends Component {
     const {count} = this.state
     const {data} = this.props
     const {
-      dish_name,
-      dish_id,
-      dish_calories,
-      dish_description,
-      dish_currency,
-      dish_price,
-      dish_image,
-      dish_Availability,
+      dishName,
+
+      dishCalories,
+      dishDescription,
+      dishCurrency,
+      dishPrice,
+      dishImage,
+      dishAvailability,
       addonCat = [],
     } = data
 
@@ -47,12 +47,12 @@ class Card extends Component {
           return (
             <li className="card list-container">
               <div className="card-1">
-                <h1 className="dish-name">{dish_name}</h1>
+                <h1 className="dish-name">{dishName}</h1>
                 <p className="currency">
-                  {dish_currency} {dish_price}
+                  {dishCurrency} {dishPrice}
                 </p>
-                <p className="description">{dish_description}</p>
-                {dish_Availability ? (
+                <p className="description">{dishDescription}</p>
+                {dishAvailability ? (
                   <>
                     <div className="button-div">
                       <button
@@ -89,8 +89,8 @@ class Card extends Component {
                 )}
               </div>
               <div className="card-2">
-                <p className="calories">{dish_calories} calories</p>
-                <img src={dish_image} alt={dish_name} className="dishimg" />
+                <p className="calories">{dishCalories} calories</p>
+                <img src={dishImage} alt={dishName} className="dishimg" />
               </div>
             </li>
           )
